@@ -1,0 +1,27 @@
+KMXMLParser
+
+KMXMLParser class is really simple to implement in your app. Just follow these steps:
+
+1. Drag the KMXMLParser.m and KMXMLParser.h into your Xcode project. Make sure to check the 'copy' box.
+2. In the class you want to parse the XML file import "KMXMLParser.h"
+3. To parse your file you need to implement the following code:
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+KMXMLParser *km = [[KMXMLParser alloc] init];
+NSString *string = @"LINK_TO_YOUR_XML_FILE_HERE";
+[km parseURL:string];
+NSMutableArray *posts = [km posts];
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+4. Posts will now contain all the data. Accessing it is simple. If you want the title of the most recent post run:
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+NSLog(@"%@", [[posts objectAtIndex:0] objectForKey@"title"]);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+It should be pretty straightforward from there. 
+
+
+Any suggestions, comments, questions e-mail me: kmcgrady90@gmail.com
+You can also follow me on twitter: http://www.twitter.com/kmcgrady
+Or on Google Buzz at: http://www.google.com/profiles/kmcgrady90
