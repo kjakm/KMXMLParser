@@ -3,7 +3,6 @@
 //  KMXMLClass
 //
 //  Created by Kieran McGrady http://www.kieranmcgrady.me
-//  Use this class freely but please maintain my name and website above
 //
 
 #import <Foundation/Foundation.h>
