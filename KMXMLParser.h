@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface KMXMLParser : NSObject {
+@interface KMXMLParser : NSObject <NSXMLParserDelegate>{
 
 	NSXMLParser *parser;
 	NSMutableArray *posts;
@@ -21,7 +21,7 @@
 	
 }
 
-- (void)parseURL:(NSString *)URL;
+-(void)parseURL:(NSString *)URL;
 -(void)beginParsing:(NSURL *)xmlURL;
 -(NSMutableArray *)posts;
 @end
