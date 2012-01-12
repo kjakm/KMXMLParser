@@ -2,8 +2,11 @@
 //  KMXMLParser.m
 //  KMXMLClass
 //
-//  Created by Kieran McGrady http://www.kieranmcgrady.me
+//  Created by Kieran McGrady http://www.kieranmcgrady.com
+//  Twitter: http://twitter.com/kmcgrady
 //
+//  You can use this code freely in any project commercial and non-
+//  commercial. You must retain this header.
 
 #import "KMXMLParser.h"
 
