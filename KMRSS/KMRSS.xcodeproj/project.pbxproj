@@ -1,0 +1,275 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		892EBCB214C0F5E400C9B31B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892EBCB114C0F5E400C9B31B /* UIKit.framework */; };
+		892EBCB414C0F5E400C9B31B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892EBCB314C0F5E400C9B31B /* Foundation.framework */; };
+		892EBCB614C0F5E400C9B31B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 892EBCB514C0F5E400C9B31B /* CoreGraphics.framework */; };
+		892EBCBC14C0F5E400C9B31B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 892EBCBA14C0F5E400C9B31B /* InfoPlist.strings */; };
+		892EBCBE14C0F5E400C9B31B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 892EBCBD14C0F5E400C9B31B /* main.m */; };
+		892EBCC214C0F5E500C9B31B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 892EBCC114C0F5E500C9B31B /* AppDelegate.m */; };
+		89BA20C114C1296600D33178 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BA20C014C1296600D33178 /* MainViewController.m */; };
+		89BA20C514C129ED00D33178 /* KMXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BA20C414C129ED00D33178 /* KMXMLParser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		892EBCAD14C0F5E400C9B31B /* KMRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		892EBCB114C0F5E400C9B31B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		892EBCB314C0F5E400C9B31B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		892EBCB514C0F5E400C9B31B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		892EBCB914C0F5E400C9B31B /* KMRSS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KMRSS-Info.plist"; sourceTree = "<group>"; };
+		892EBCBB14C0F5E400C9B31B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		892EBCBD14C0F5E400C9B31B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		892EBCBF14C0F5E500C9B31B /* KMRSS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KMRSS-Prefix.pch"; sourceTree = "<group>"; };
+		892EBCC014C0F5E500C9B31B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		892EBCC114C0F5E500C9B31B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		89BA20BF14C1296600D33178 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		89BA20C014C1296600D33178 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		89BA20C314C129ED00D33178 /* KMXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMXMLParser.h; sourceTree = "<group>"; };
+		89BA20C414C129ED00D33178 /* KMXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMXMLParser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		892EBCAA14C0F5E400C9B31B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				892EBCB214C0F5E400C9B31B /* UIKit.framework in Frameworks */,
+				892EBCB414C0F5E400C9B31B /* Foundation.framework in Frameworks */,
+				892EBCB614C0F5E400C9B31B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		892EBCA214C0F5DE00C9B31B = {
+			isa = PBXGroup;
+			children = (
+				892EBCB714C0F5E400C9B31B /* KMRSS */,
+				892EBCB014C0F5E400C9B31B /* Frameworks */,
+				892EBCAE14C0F5E400C9B31B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		892EBCAE14C0F5E400C9B31B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				892EBCAD14C0F5E400C9B31B /* KMRSS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		892EBCB014C0F5E400C9B31B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				892EBCB114C0F5E400C9B31B /* UIKit.framework */,
+				892EBCB314C0F5E400C9B31B /* Foundation.framework */,
+				892EBCB514C0F5E400C9B31B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		892EBCB714C0F5E400C9B31B /* KMRSS */ = {
+			isa = PBXGroup;
+			children = (
+				89BA20C314C129ED00D33178 /* KMXMLParser.h */,
+				89BA20C414C129ED00D33178 /* KMXMLParser.m */,
+				892EBCC014C0F5E500C9B31B /* AppDelegate.h */,
+				892EBCC114C0F5E500C9B31B /* AppDelegate.m */,
+				892EBCB814C0F5E400C9B31B /* Supporting Files */,
+				89BA20BF14C1296600D33178 /* MainViewController.h */,
+				89BA20C014C1296600D33178 /* MainViewController.m */,
+			);
+			path = KMRSS;
+			sourceTree = "<group>";
+		};
+		892EBCB814C0F5E400C9B31B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				892EBCB914C0F5E400C9B31B /* KMRSS-Info.plist */,
+				892EBCBA14C0F5E400C9B31B /* InfoPlist.strings */,
+				892EBCBD14C0F5E400C9B31B /* main.m */,
+				892EBCBF14C0F5E500C9B31B /* KMRSS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		892EBCAC14C0F5E400C9B31B /* KMRSS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 892EBCC514C0F5E500C9B31B /* Build configuration list for PBXNativeTarget "KMRSS" */;
+			buildPhases = (
+				892EBCA914C0F5E400C9B31B /* Sources */,
+				892EBCAA14C0F5E400C9B31B /* Frameworks */,
+				892EBCAB14C0F5E400C9B31B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KMRSS;
+			productName = KMRSS;
+			productReference = 892EBCAD14C0F5E400C9B31B /* KMRSS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		892EBCA414C0F5DF00C9B31B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "HotRod software";
+			};
+			buildConfigurationList = 892EBCA714C0F5DF00C9B31B /* Build configuration list for PBXProject "KMRSS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 892EBCA214C0F5DE00C9B31B;
+			productRefGroup = 892EBCAE14C0F5E400C9B31B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				892EBCAC14C0F5E400C9B31B /* KMRSS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		892EBCAB14C0F5E400C9B31B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				892EBCBC14C0F5E400C9B31B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		892EBCA914C0F5E400C9B31B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				892EBCBE14C0F5E400C9B31B /* main.m in Sources */,
+				892EBCC214C0F5E500C9B31B /* AppDelegate.m in Sources */,
+				89BA20C114C1296600D33178 /* MainViewController.m in Sources */,
+				89BA20C514C129ED00D33178 /* KMXMLParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		892EBCBA14C0F5E400C9B31B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				892EBCBB14C0F5E400C9B31B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		892EBCC314C0F5E500C9B31B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		892EBCC414C0F5E500C9B31B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		892EBCC614C0F5E500C9B31B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KMRSS/KMRSS-Prefix.pch";
+				INFOPLIST_FILE = "KMRSS/KMRSS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		892EBCC714C0F5E500C9B31B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KMRSS/KMRSS-Prefix.pch";
+				INFOPLIST_FILE = "KMRSS/KMRSS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		892EBCA714C0F5DF00C9B31B /* Build configuration list for PBXProject "KMRSS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				892EBCC314C0F5E500C9B31B /* Debug */,
+				892EBCC414C0F5E500C9B31B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		892EBCC514C0F5E500C9B31B /* Build configuration list for PBXNativeTarget "KMRSS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				892EBCC614C0F5E500C9B31B /* Debug */,
+				892EBCC714C0F5E500C9B31B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 892EBCA414C0F5DF00C9B31B /* Project object */;
+}
