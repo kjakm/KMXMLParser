@@ -55,6 +55,7 @@
 
 - (void)parserDidFailWithError:(NSError *)error;
 - (void)parserCompletedSuccessfully;
+- (void)parserDidBegin;
 
 @end
 

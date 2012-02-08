@@ -64,7 +64,7 @@
 #pragma mark NSXMLParser Delegate Methods
 - (void)parserDidStartDocument:(NSXMLParser *)parser
 {
-
+    [self.delegate parserDidBegin];
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser
