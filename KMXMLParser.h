@@ -10,6 +10,12 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol KMXMLParserDelegate <NSObject>
+
+- (void)parserDidFailWithError:(NSError *)error;
+- (void)parserCompletedSuccessfully;
+
+@end
 
 @interface KMXMLParser : NSObject <NSXMLParserDelegate>{
 
@@ -21,8 +27,11 @@
 	NSMutableString *date;
 	NSMutableString *summary;
 	NSMutableString *link;
-	
+    
+    id <KMXMLParserDelegate> parserDelegate;
 }
+
+@property (strong, nonatomic) id <KMXMLParserDelegate> parserDelegate;
 
 - (id)initWithURL:(NSString *)url;
 - (void)beginParsing:(NSURL *)xmlURL;

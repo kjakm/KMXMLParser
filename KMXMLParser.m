@@ -12,6 +12,7 @@
 
 
 @implementation KMXMLParser
+@synthesize parserDelegate = _parserDelegate;
 
 - (id)initWithURL:(NSString *)url
 {
@@ -42,18 +43,17 @@
 #pragma mark NSXMLParser Delegate Methods
 - (void)parserDidStartDocument:(NSXMLParser *)parser
 {
-	NSLog(@"Parsing has begun");
+
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser
 {
-	NSLog(@"Parsing complete");
-	NSLog(@"You may need to reload your tableview to see changes");
+    [self.parserDelegate parserCompletedSuccessfully];
 }
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError
 {
-	NSLog(@"ERROR OCCURED WHEN PARSING: %@", parseError.code);
+    [self.parserDelegate parserDidFailWithError:parseError];
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI 
