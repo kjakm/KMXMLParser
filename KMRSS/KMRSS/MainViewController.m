@@ -120,4 +120,9 @@
     NSLog(@"Parse complete. You may need to reload the table view to see the data.");
 }
 
+- (void)parserDidBegin
+{
+    NSLog(@"Parsing has begun");
+}
+
 @end
