@@ -4,14 +4,36 @@
 
 1. Drag the KMXMLParser.m and KMXMLParser.h into your Xcode project. Make sure to check the 'copy' box.
 2. In the class you want to parse the XML file import "KMXMLParser.h"
-3. To parse your file you need to implement the following code:
+3. To parse your file you need to use the following code:
 
-	KMXMLParser *km = [[KMXMLParser alloc] init];  
-	NSString *string = @"LINK_TO_YOUR_XML_FILE_HERE";  
-	[km parseURL:string];  
+	KMXMLParser *km = [[KMXMLParser alloc] initWithURL:@"http://website.com/rss"];  
+    km.parserDelegate = self;
 	NSMutableArray *posts = [km posts];  
 
-4. Posts will now contain all the data. Accessing it is simple. If you want the title of the most recent post run:
+4. Your posts array will now contain all the data. Accessing it is simple. If you want the title of the most recent post call:
 
-	NSLog(@"%@", [[posts objectAtIndex:0] 	objectForKey@"title"]);  
+	NSLog(@"%@", [[posts objectAtIndex:0] objectForKey@"title"]);  
 
+5. You can also get the 'summary', 'date', and 'link' using the appropriate keys
+
+
+  The MIT License
+
+  Copyright (c)
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of 
+  this software and associated documentation files (the "Software"), to deal in 
+  the Software without restriction, including without limitation the rights to use, 
+  copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the 
+  Software, and to permit persons to whom the Software is furnished to do so, subject 
+  to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all 
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+  INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS 
+  FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS 
+  OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF 
+  OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
