@@ -6,7 +6,6 @@
 //
 
 #import "MainViewController.h"
-#import "KMXMLParser.h"
 
 @implementation MainViewController
 @synthesize dataArray = _dataArray;
@@ -28,51 +27,21 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-- (void)dealloc 
-{
-    [self.dataArray release];
-    [super dealloc];
-}
-
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
+    // Set the navigation bar title
     self.title = @"Feed";
     
-    KMXMLParser *parser = [[KMXMLParser alloc] init];
-    [parser parseURL:@"http://www.kieranmcgrady.com/rss"];
+    /* Create the parser and initialize with the feed URL. The URL must start with http:// . If it starts
+    with feed:// change it to http:// */
+    KMXMLParser *parser = [[KMXMLParser alloc] initWithURL:@"http://feeds.bbci.co.uk/news/rss.xml"];
+    parser.parserDelegate = self;
+    //To get the result and store it in an array call the parser 'posts' method
     self.dataArray = [parser posts];
-    [parser release];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -101,12 +70,14 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    // Configure the cell...
-    cell.textLabel.text = [[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"title"];
-    cell.detailTextLabel.text = [[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"summary"];
+    
+    // Get the title and summary from the array and display
+    // You can get the date the content was published using the 'date' key
+    cell.textLabel.text = [NSString stringWithFormat:@"Title: %@", [[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"title"]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Summary: %@", [[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"summary"]];
     
     return cell;
 }
@@ -118,6 +89,18 @@
 {
     //This will open the URL in Safari. You can pass it to another view controller and open it in a UIWebView if you want
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"link"]]];
+}
+
+#pragma mark - Parser delegate
+
+- (void)parserDidFailWithError:(NSError *)error
+{
+    NSLog(@"Error: %@", error);
+}
+
+- (void)parserCompletedSuccessfully
+{
+    NSLog(@"Parse complete. You may need to reload the table view to see the data.");
 }
 
 @end

@@ -6,8 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KMXMLParser.h"
 
-@interface MainViewController : UITableViewController
+@interface MainViewController : UITableViewController <KMXMLParserDelegate>
 
 @property (strong, nonatomic) NSArray *dataArray;
 
