@@ -6,8 +6,7 @@
 2. In the class you want to parse the XML file import "KMXMLParser.h"
 3. To parse your file you need to use the following code:
 
-    KMXMLParser *km = [[KMXMLParser alloc] initWithURL:@"http://"];  
-    km.parserDelegate = self;
+    KMXMLParser *km = [[KMXMLParser alloc] initWithURL:@"http://" delegate:self];  
     NSMutableArray *posts = [km posts];  
 
 4. Your posts array will now contain all the data. Accessing it is simple. If you want the title of the most recent post call:
