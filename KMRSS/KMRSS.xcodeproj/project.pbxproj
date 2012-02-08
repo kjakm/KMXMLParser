@@ -14,7 +14,8 @@
 		892EBCBE14C0F5E400C9B31B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 892EBCBD14C0F5E400C9B31B /* main.m */; };
 		892EBCC214C0F5E500C9B31B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 892EBCC114C0F5E500C9B31B /* AppDelegate.m */; };
 		89BA20C114C1296600D33178 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BA20C014C1296600D33178 /* MainViewController.m */; };
-		89BA20C514C129ED00D33178 /* KMXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BA20C414C129ED00D33178 /* KMXMLParser.m */; };
+		89D7EAB814E2106C0030D037 /* KMXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D7EAB714E2106C0030D037 /* KMXMLParser.m */; };
+		89D7EABA14E215A90030D037 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = 89D7EAB914E215A90030D037 /* README.mdown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +31,9 @@
 		892EBCC114C0F5E500C9B31B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		89BA20BF14C1296600D33178 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		89BA20C014C1296600D33178 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		89BA20C314C129ED00D33178 /* KMXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMXMLParser.h; sourceTree = "<group>"; };
-		89BA20C414C129ED00D33178 /* KMXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMXMLParser.m; sourceTree = "<group>"; };
+		89D7EAB614E2106C0030D037 /* KMXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMXMLParser.h; path = ../../KMXMLParser.h; sourceTree = "<group>"; };
+		89D7EAB714E2106C0030D037 /* KMXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMXMLParser.m; path = ../../KMXMLParser.m; sourceTree = "<group>"; };
+		89D7EAB914E215A90030D037 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.mdown; path = ../../README.mdown; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +80,8 @@
 		892EBCB714C0F5E400C9B31B /* KMRSS */ = {
 			isa = PBXGroup;
 			children = (
-				89BA20C314C129ED00D33178 /* KMXMLParser.h */,
-				89BA20C414C129ED00D33178 /* KMXMLParser.m */,
+				89D7EAB614E2106C0030D037 /* KMXMLParser.h */,
+				89D7EAB714E2106C0030D037 /* KMXMLParser.m */,
 				892EBCC014C0F5E500C9B31B /* AppDelegate.h */,
 				892EBCC114C0F5E500C9B31B /* AppDelegate.m */,
 				892EBCB814C0F5E400C9B31B /* Supporting Files */,
@@ -92,6 +94,7 @@
 		892EBCB814C0F5E400C9B31B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				89D7EAB914E215A90030D037 /* README.mdown */,
 				892EBCB914C0F5E400C9B31B /* KMRSS-Info.plist */,
 				892EBCBA14C0F5E400C9B31B /* InfoPlist.strings */,
 				892EBCBD14C0F5E400C9B31B /* main.m */,
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				892EBCBC14C0F5E400C9B31B /* InfoPlist.strings in Resources */,
+				89D7EABA14E215A90030D037 /* README.mdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +169,7 @@
 				892EBCBE14C0F5E400C9B31B /* main.m in Sources */,
 				892EBCC214C0F5E500C9B31B /* AppDelegate.m in Sources */,
 				89BA20C114C1296600D33178 /* MainViewController.m in Sources */,
-				89BA20C514C129ED00D33178 /* KMXMLParser.m in Sources */,
+				89D7EAB814E2106C0030D037 /* KMXMLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +233,7 @@
 		892EBCC614C0F5E500C9B31B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KMRSS/KMRSS-Prefix.pch";
 				INFOPLIST_FILE = "KMRSS/KMRSS-Info.plist";
@@ -240,6 +245,7 @@
 		892EBCC714C0F5E500C9B31B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KMRSS/KMRSS-Prefix.pch";
 				INFOPLIST_FILE = "KMRSS/KMRSS-Info.plist";
