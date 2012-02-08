@@ -13,28 +13,25 @@
 
 @implementation KMXMLParser
 
-- (void)parseURL:(NSString *)url
+- (id)initWithURL:(NSString *)url
 {
-	//Create NSURL from given string
 	NSURL *xmlURL = [NSURL URLWithString:url];
 	[self beginParsing:xmlURL];
+    
+    return self;
 }
 
 -(void)beginParsing:(NSURL *)xmlURL
 {
-	//Initialize variables
 	posts = [[NSMutableArray alloc] init];
 	parser = [[NSXMLParser alloc] initWithContentsOfURL:xmlURL];
 	[parser setDelegate:self];
 	
-	//These can be modified depending on what you are parsing
 	[parser setShouldProcessNamespaces:NO];
 	[parser setShouldReportNamespacePrefixes:NO];
 	[parser setShouldResolveExternalEntities:NO];
 	
-	//Begin parsing operation
 	[parser parse];
-	
 }
 
 -(NSMutableArray *)posts
@@ -45,7 +42,7 @@
 #pragma mark NSXMLParser Delegate Methods
 - (void)parserDidStartDocument:(NSXMLParser *)parser
 {
-	NSLog(@"Parsing has began");
+	NSLog(@"Parsing has begun");
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser
@@ -57,14 +54,6 @@
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError
 {
 	NSLog(@"ERROR OCCURED WHEN PARSING: %@", parseError.code);
-	//Uncomment the following block of code to display an alert when an error occurs
-	/*UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-													message:@"An error occured when getting the data"
-												   delegate:self
-										  cancelButtonTitle:@"Dismiss"
-										  otherButtonTitles:nil];
-	[alert show];
-	[alert release];*/
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI 
@@ -72,7 +61,6 @@
 {
 	element = [elementName copy];
 	
-	//If elementName == 'item' alloc and initalize dict and strings
 	if ([elementName isEqualToString:@"item"]) 
 	{
 		elements = [[NSMutableDictionary alloc] init];
@@ -86,7 +74,6 @@
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI 
  qualifiedName:(NSString *)qName
 {
-	//If elementName == 'item' save the values to the dictionary
 	if ([elementName isEqualToString:@"item"]) 
 	{
 		[elements setObject:title forKey:@"title"];
@@ -100,7 +87,6 @@
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
-	//Append the string the correct elements
 	if ([element isEqualToString:@"title"]) 
 	{
 		[title appendString:string];

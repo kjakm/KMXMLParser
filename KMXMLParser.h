@@ -24,7 +24,7 @@
 	
 }
 
--(void)parseURL:(NSString *)URL;
--(void)beginParsing:(NSURL *)xmlURL;
--(NSMutableArray *)posts;
+- (id)initWithURL:(NSString *)url;
+- (void)beginParsing:(NSURL *)xmlURL;
+- (NSMutableArray *)posts;
 @end
