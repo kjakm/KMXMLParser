@@ -32,10 +32,11 @@
 
 
 @implementation KMXMLParser
-@synthesize parserDelegate = _parserDelegate;
+@synthesize delegate;
 
-- (id)initWithURL:(NSString *)url
+- (id)initWithURL:(NSString *)url delegate:(id)theDelegate;
 {
+    self.delegate = theDelegate;
 	NSURL *xmlURL = [NSURL URLWithString:url];
 	[self beginParsing:xmlURL];
     
@@ -68,12 +69,12 @@
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser
 {
-    [self.parserDelegate parserCompletedSuccessfully];
+    [self.delegate parserCompletedSuccessfully];
 }
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError
 {
-    [self.parserDelegate parserDidFailWithError:parseError];
+    [self.delegate parserDidFailWithError:parseError];
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI 

@@ -28,12 +28,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol KMXMLParserDelegate <NSObject>
-
-- (void)parserDidFailWithError:(NSError *)error;
-- (void)parserCompletedSuccessfully;
-
-@end
+@protocol KMXMLParserDelegate;
 
 @interface KMXMLParser : NSObject <NSXMLParserDelegate>{
 
@@ -46,12 +41,20 @@
 	NSMutableString *summary;
 	NSMutableString *link;
     
-    id <KMXMLParserDelegate> parserDelegate;
+    __weak id <KMXMLParserDelegate> delegate;
 }
 
-@property (strong, nonatomic) id <KMXMLParserDelegate> parserDelegate;
+@property (weak, nonatomic) id <KMXMLParserDelegate> delegate;
 
-- (id)initWithURL:(NSString *)url;
+- (id)initWithURL:(NSString *)url delegate:(id)delegate;
 - (void)beginParsing:(NSURL *)xmlURL;
 - (NSMutableArray *)posts;
 @end
+
+@protocol KMXMLParserDelegate <NSObject>
+
+- (void)parserDidFailWithError:(NSError *)error;
+- (void)parserCompletedSuccessfully;
+
+@end
+
