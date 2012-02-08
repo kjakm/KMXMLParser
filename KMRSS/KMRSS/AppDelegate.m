@@ -12,16 +12,10 @@
 
 @synthesize window = _window, navController = _navController;
 
-- (void)dealloc
-{
-    [_window release];
-    [_navController release];
-    [super dealloc];
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     MainViewController *mainViewController = [[MainViewController alloc] initWithStyle:UITableViewStylePlain];
     self.navController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
@@ -32,7 +26,6 @@
     [self.window makeKeyAndVisible];
     [self.window addSubview:self.navController.view];
     
-    [mainViewController release];
     
     return YES;
 }
