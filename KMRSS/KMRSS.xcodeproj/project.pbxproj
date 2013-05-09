@@ -13,6 +13,8 @@
 		892EBCBC14C0F5E400C9B31B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 892EBCBA14C0F5E400C9B31B /* InfoPlist.strings */; };
 		892EBCBE14C0F5E400C9B31B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 892EBCBD14C0F5E400C9B31B /* main.m */; };
 		892EBCC214C0F5E500C9B31B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 892EBCC114C0F5E500C9B31B /* AppDelegate.m */; };
+		8958F924173C254500BDBBC4 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8958F922173C254500BDBBC4 /* WebViewController.m */; };
+		8958F925173C254500BDBBC4 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8958F923173C254500BDBBC4 /* WebViewController.xib */; };
 		8988413B173BDC77008FE738 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8988413A173BDC77008FE738 /* Default-568h@2x.png */; };
 		89BA20C114C1296600D33178 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BA20C014C1296600D33178 /* MainViewController.m */; };
 		89D7EAB814E2106C0030D037 /* KMXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D7EAB714E2106C0030D037 /* KMXMLParser.m */; };
@@ -30,6 +32,9 @@
 		892EBCBF14C0F5E500C9B31B /* KMRSS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KMRSS-Prefix.pch"; sourceTree = "<group>"; };
 		892EBCC014C0F5E500C9B31B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		892EBCC114C0F5E500C9B31B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8958F921173C254500BDBBC4 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		8958F922173C254500BDBBC4 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		8958F923173C254500BDBBC4 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		8988413A173BDC77008FE738 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		89BA20BF14C1296600D33178 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		89BA20C014C1296600D33178 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
@@ -90,6 +95,9 @@
 				892EBCB814C0F5E400C9B31B /* Supporting Files */,
 				89BA20BF14C1296600D33178 /* MainViewController.h */,
 				89BA20C014C1296600D33178 /* MainViewController.m */,
+				8958F921173C254500BDBBC4 /* WebViewController.h */,
+				8958F922173C254500BDBBC4 /* WebViewController.m */,
+				8958F923173C254500BDBBC4 /* WebViewController.xib */,
 			);
 			path = KMRSS;
 			sourceTree = "<group>";
@@ -160,6 +168,7 @@
 				892EBCBC14C0F5E400C9B31B /* InfoPlist.strings in Resources */,
 				89D7EABA14E215A90030D037 /* README.mdown in Resources */,
 				8988413B173BDC77008FE738 /* Default-568h@2x.png in Resources */,
+				8958F925173C254500BDBBC4 /* WebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +183,7 @@
 				892EBCC214C0F5E500C9B31B /* AppDelegate.m in Sources */,
 				89BA20C114C1296600D33178 /* MainViewController.m in Sources */,
 				89D7EAB814E2106C0030D037 /* KMXMLParser.m in Sources */,
+				8958F924173C254500BDBBC4 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
