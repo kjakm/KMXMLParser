@@ -34,11 +34,10 @@
 @implementation KMXMLParser
 @synthesize delegate;
 
-- (id)initWithURL:(NSString *)url delegate:(id)theDelegate;
+- (id)initWithURL:(NSURL *)url delegate:(id)theDelegate;
 {
     self.delegate = theDelegate;
-	NSURL *xmlURL = [NSURL URLWithString:url];
-	[self beginParsing:xmlURL];
+	[self beginParsing:url];
     
     return self;
 }
