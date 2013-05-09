@@ -1,24 +1,27 @@
-##KMXMLParser
+#KMXMLParser
 
-#How to use
+###How to use
 
-1. Drag the KMXMLParser.m and KMXMLParser.h into your Xcode project. Make sure to check the 'copy' box.
-2. In the class you want to parse the XML file import "KMXMLParser.h"
+1. Drag KMXMLParser.m and KMXMLParser.h into your Xcode project. Make sure to check the "Copy items into destination group's folder" box and add the files to your target.
+
+2. At the top of the class you want to parse the XML file ``#import "KMXMLParser.h"``
+
 3. To parse your file you need to use the following code:
 
-    KMXMLParser *km = [[KMXMLParser alloc] initWithURL:@"http://" delegate:self];  
-    NSMutableArray *posts = [km posts];  
+    ``KMXMLParser *km = [[KMXMLParser alloc] initWithURL:url delegate:self]; `` 
+    ``NSMutableArray *posts = [km posts];``
 
-4. Your posts array will now contain all the data. Accessing it is simple. If you want the title of the most recent post call:
+4. Your posts array will now contain all the data from the XML. You can access it using the relevent key. For example, if you want the title of the most recent post you would use:
 
-    NSLog(@"%@", [[posts objectAtIndex:0] objectForKey@"title"]);  
+    ``[[posts objectAtIndex:0] objectForKey@"title"]);``  
 
-5. You can also get the 'summary', 'date', and 'link' using the appropriate keys
+5. You can also get the ``summary``, ``date``, and ``link`` using the appropriate key.
 
+###License
 
   The MIT License
 
-  Copyright 2011 Kieran McGrady(c)
+  Copyright 2011-2013 Kieran McGrady
 
   Permission is hereby granted, free of charge, to any person obtaining a copy of 
   this software and associated documentation files (the "Software"), to deal in 
