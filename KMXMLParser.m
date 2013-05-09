@@ -2,9 +2,7 @@
 //  KMXMLParser.m
 //  KMXMLClass
 //
-//  Created by Kieran McGrady http://www.kieranmcgrady.com
-//  Twitter: http://twitter.com/kmcgrady
-//
+//  Created by Kieran McGrady
 //
 //  The MIT License
 //
