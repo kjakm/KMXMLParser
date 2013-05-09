@@ -24,6 +24,7 @@
 //  OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import "MainViewController.h"
+#import "WebViewController.h"
 
 @implementation MainViewController
 @synthesize dataArray = _dataArray;
@@ -54,9 +55,12 @@
     // Set the navigation bar title
     self.title = @"Feed";
     
+    // Set tableview row height
+    self.tableView.rowHeight = 65;
+    
     /* Create the parser and initialize with the feed URL. The URL must start with http:// . If it starts
     with feed:// change it to http:// */
-    NSURL *feedURL = [NSURL URLWithString:@"http://feeds.bbci.co.uk/news/rss.xml"];
+    NSURL *feedURL = [NSURL URLWithString:@"http://mf.feeds.reuters.com/reuters/technologyNews"];
     KMXMLParser *parser = [[KMXMLParser alloc] initWithURL:feedURL delegate:self];
     //To get the result and store it in an array call the parser 'posts' method
     self.dataArray = [parser posts];
@@ -91,11 +95,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    
     // Get the title and summary from the array and display
     // You can get the date the content was published using the 'date' key
-    cell.textLabel.text = [NSString stringWithFormat:@"Title: %@", [[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"title"]];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Summary: %@", [[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"summary"]];
+    cell.textLabel.text = [[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"title"];
+    cell.detailTextLabel.text = [[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"summary"];
+    cell.detailTextLabel.numberOfLines = 2;
     
     return cell;
 }
@@ -105,8 +109,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //This will open the URL in Safari. You can pass it to another view controller and open it in a UIWebView if you want
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"link"]]];
+    NSString *tmpURL = [[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"link"];
+    tmpURL = [tmpURL stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSURL *url = [NSURL URLWithString:[tmpURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+
+    WebViewController *vc = [[WebViewController alloc] initWithNibName:@"WebViewController" bundle:nil title:[[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"title"] url:url];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - Parser delegate
