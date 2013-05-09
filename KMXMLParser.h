@@ -46,7 +46,7 @@
 
 @property (weak, nonatomic) id <KMXMLParserDelegate> delegate;
 
-- (id)initWithURL:(NSString *)url delegate:(id)delegate;
+- (id)initWithURL:(NSURL *)url delegate:(id)delegate;
 - (void)beginParsing:(NSURL *)xmlURL;
 - (NSMutableArray *)posts;
 @end
