@@ -27,4 +27,6 @@
 
 @interface WebViewController : UIViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil title:(NSString *)title url:(NSURL *)url;
+
 @end
