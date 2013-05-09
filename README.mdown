@@ -9,6 +9,7 @@
 3. To parse your file you need to use the following code:
 
     ``KMXMLParser *km = [[KMXMLParser alloc] initWithURL:url delegate:self]; `` 
+
     ``NSMutableArray *posts = [km posts];``
 
 4. Your posts array will now contain all the data from the XML. You can access it using the relevent key. For example, if you want the title of the most recent post you would use:
