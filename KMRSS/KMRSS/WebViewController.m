@@ -61,4 +61,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark WebView Delegate
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    NSLog(@"Loading...");
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    NSLog(@"Loaded");
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    NSLog(@"Failed to load");
+}
+
 @end
