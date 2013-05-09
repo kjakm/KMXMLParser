@@ -27,15 +27,20 @@
 
 @interface WebViewController ()
 
+@property (strong, nonatomic) NSURL *link;
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
+
 @end
 
 @implementation WebViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil title:(NSString *)title url:(NSURL *)url
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title = title;
+        _link = url;
     }
     return self;
 }
@@ -43,7 +48,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [_webView loadRequest:[NSURLRequest requestWithURL:_link]];
 }
 
 - (void)didReceiveMemoryWarning
