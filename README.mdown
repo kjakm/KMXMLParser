@@ -18,6 +18,13 @@
 
 5. You can also get the ``summary``, ``date``, and ``link`` using the appropriate key.
 
+###To Do
+
+1. Add support for images
+
+2. Update sample project for iOS 7
+
+
 ###License
 
   The MIT License
