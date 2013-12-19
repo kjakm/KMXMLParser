@@ -38,6 +38,9 @@
     MainViewController *mainViewController = [[MainViewController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:mainViewController];
     
+    // Set appearance
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0.159 green:0.841 blue:0.082 alpha:1.000]];
+    
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
