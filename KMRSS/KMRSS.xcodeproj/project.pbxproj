@@ -142,6 +142,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "HotRod software";
+				TargetAttributes = {
+					892EBCAC14C0F5E400C9B31B = {
+						DevelopmentTeam = 4JBNRJ3Q9L;
+					};
+				};
 			};
 			buildConfigurationList = 892EBCA714C0F5DF00C9B31B /* Build configuration list for PBXProject "KMRSS" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -258,9 +263,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KMRSS/KMRSS-Prefix.pch";
 				INFOPLIST_FILE = "KMRSS/KMRSS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -270,9 +277,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KMRSS/KMRSS-Prefix.pch";
 				INFOPLIST_FILE = "KMRSS/KMRSS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
