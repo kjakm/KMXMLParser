@@ -56,7 +56,7 @@
     self.title = @"Feed";
     
     // Set tableview row height
-    self.tableView.rowHeight = 65;
+    self.tableView.rowHeight = 80;
     
     /* Create the parser and initialize with the feed URL. The URL must start with http:// . If it starts
     with feed:// change it to http:// */
@@ -98,8 +98,10 @@
     // Get the title and summary from the array and display
     // You can get the date the content was published using the 'date' key
     cell.textLabel.text = [[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"title"];
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:17];
     cell.detailTextLabel.text = [[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"summary"];
-    cell.detailTextLabel.numberOfLines = 2;
+    cell.detailTextLabel.numberOfLines = 3;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
