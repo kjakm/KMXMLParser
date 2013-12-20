@@ -30,8 +30,6 @@ This will return a mutable array containing all data from the feed (title, date,
 
 1. Add support for images
 
-2. Add support to request specific tags
-
 ###License
 
   The MIT License
