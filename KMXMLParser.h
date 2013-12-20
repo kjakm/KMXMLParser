@@ -48,6 +48,7 @@
 - (id)initWithURL:(NSURL *)url delegate:(id)delegate;
 - (void)beginParsing:(NSURL *)xmlURL;
 - (NSMutableArray *)postsWithTag:(NSString *)tag;
+
 @end
 
 @protocol KMXMLParserDelegate <NSObject>
