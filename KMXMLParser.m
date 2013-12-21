@@ -53,6 +53,11 @@
 	[parser parse];
 }
 
+- (NSMutableArray *)posts
+{
+    return posts;
+}
+
 - (NSMutableArray *)postsWithTag:(NSString *)tag
 {
     if (tag == nil) return posts;
