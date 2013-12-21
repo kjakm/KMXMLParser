@@ -22,7 +22,9 @@ This will return a mutable array containing all data from the feed (title, date,
 
 4. Your posts array will now contain all the data from the XML. You can access it using the relevent key. For example, if you want the title of the most recent post you would use:
 
-    ``[[posts objectAtIndex:0] objectForKey@"title"]);``  
+```Objective-C
+    [[posts objectAtIndex:0] objectForKey@"title"]);
+```
 
 5. You can also get the ``summary``, ``date``, and ``link`` using the appropriate key.
 
