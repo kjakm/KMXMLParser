@@ -11,7 +11,7 @@
 ```Objective-C
     KMXMLParser *km = [[KMXMLParser alloc] initWithURL:url delegate:self]; 
 
-    NSMutableArray *posts = [km postsWithTag:nil];
+    NSMutableArray *posts = [km posts];
 ```
 
 This will return a mutable array containing all data from the feed (title, date, summary, link). If you want an array with only one of those four pieces of data specify the tag:
