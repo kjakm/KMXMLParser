@@ -63,7 +63,7 @@
     NSURL *feedURL = [NSURL URLWithString:@"http://mf.feeds.reuters.com/reuters/technologyNews"];
     KMXMLParser *parser = [[KMXMLParser alloc] initWithURL:feedURL delegate:self];
     //To get the result and store it in an array call the parser 'posts' method
-    self.dataArray = [parser postsWithTag:nil];
+    self.dataArray = [parser posts];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
