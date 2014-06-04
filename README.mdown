@@ -1,6 +1,6 @@
 #KMXMLParser
 
-###How to use
+###How to use - Objective-c
 
 1. Drag KMXMLParser.m and KMXMLParser.h into your Xcode project. Make sure to check the "Copy items into destination group's folder" box and add the files to your target.
 
@@ -18,11 +18,29 @@
 
 5. You can also get the ``summary``, ``date``, and ``link`` using the appropriate key.
 
+###How to use - Swift
+
+1. Drag KMXMLParser.swift into your Xcode project. Make sure to check the "Copy items into destination group's folder" box and add the files to your target.
+
+2. To parse your file you need to use the following code:
+
+    ``var parser : KMXMLParser = KMXMLParser.alloc().initWithURL(url) as KMXMLParser`` 
+
+    ``dataArray = parser.posts``
+
+3. Your data array will now contain all the data from the XML. You can access it using the relevant key. For example, if you want the title of the most recent post you would use:
+
+    ``var dict : NSDictionary! = dataArray.objectAtIndex(0) as NSDictionary
+      var title = dict.objectForKey("title")
+``  
+
+4. You can also get the ``summary``, ``date``, and ``link`` using the appropriate key.
+
 ###License
 
   The MIT License
 
-  Copyright 2011-2013 Kieran McGrady
+  Copyright 2011-2014 Kieran McGrady
 
   Permission is hereby granted, free of charge, to any person obtaining a copy of 
   this software and associated documentation files (the "Software"), to deal in 
