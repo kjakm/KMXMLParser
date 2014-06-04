@@ -1,5 +1,9 @@
 #KMXMLParser
 
+Follow the instructions below or check out the Objective-c and Swift sample projects. 
+
+NB: The Swift code is still pretty rough but it's functioning.
+
 ###How to use - Objective-c
 
 1. Drag KMXMLParser.m and KMXMLParser.h into your Xcode project. Make sure to check the "Copy items into destination group's folder" box and add the files to your target.
