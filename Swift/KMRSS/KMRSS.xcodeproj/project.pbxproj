@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		892C886E193F63F800144931 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892C886D193F63F800144931 /* WebViewController.swift */; };
+		899C9E6D193F38B700AC96F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899C9E6C193F38B700AC96F4 /* Main.storyboard */; };
+		899C9E70193F3A3000AC96F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C9E6F193F3A3000AC96F4 /* MainViewController.swift */; };
 		89E03531193F282D004E58CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E03530193F282D004E58CC /* AppDelegate.swift */; };
 		89E03533193F282D004E58CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89E03532193F282D004E58CC /* Images.xcassets */; };
 		89E0353F193F282D004E58CC /* KMRSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E0353E193F282D004E58CC /* KMRSSTests.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		892C886D193F63F800144931 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = Controllers/WebViewController.swift; sourceTree = "<group>"; };
+		899C9E6C193F38B700AC96F4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		899C9E6F193F3A3000AC96F4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Controllers/MainViewController.swift; sourceTree = "<group>"; };
 		89E0352B193F282D004E58CC /* KMRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E0352F193F282D004E58CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89E03530193F282D004E58CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		899C9E6E193F3A1E00AC96F4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				899C9E6F193F3A3000AC96F4 /* MainViewController.swift */,
+				892C886D193F63F800144931 /* WebViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		89E03522193F282D004E58CC = {
 			isa = PBXGroup;
 			children = (
@@ -73,10 +88,12 @@
 		89E0352D193F282D004E58CC /* KMRSS */ = {
 			isa = PBXGroup;
 			children = (
+				899C9E6E193F3A1E00AC96F4 /* Controllers */,
 				89E03548193F2846004E58CC /* KMXMLParser */,
 				89E03530193F282D004E58CC /* AppDelegate.swift */,
 				89E03532193F282D004E58CC /* Images.xcassets */,
 				89E0352E193F282D004E58CC /* Supporting Files */,
+				899C9E6C193F38B700AC96F4 /* Main.storyboard */,
 			);
 			path = KMRSS;
 			sourceTree = "<group>";
@@ -194,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89E03533193F282D004E58CC /* Images.xcassets in Resources */,
+				899C9E6D193F38B700AC96F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,8 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899C9E70193F3A3000AC96F4 /* MainViewController.swift in Sources */,
 				89E0354A193F2875004E58CC /* KMXMLParser.swift in Sources */,
 				89E03531193F282D004E58CC /* AppDelegate.swift in Sources */,
+				892C886E193F63F800144931 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,8 +340,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = KMRSS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -331,8 +353,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = KMRSS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -391,6 +415,7 @@
 				89E03544193F282D004E58CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89E03545193F282D004E58CC /* Build configuration list for PBXNativeTarget "KMRSSTests" */ = {
 			isa = XCConfigurationList;
@@ -399,6 +424,7 @@
 				89E03547193F282D004E58CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
