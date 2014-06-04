@@ -10,6 +10,7 @@
 		89E03531193F282D004E58CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E03530193F282D004E58CC /* AppDelegate.swift */; };
 		89E03533193F282D004E58CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89E03532193F282D004E58CC /* Images.xcassets */; };
 		89E0353F193F282D004E58CC /* KMRSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E0353E193F282D004E58CC /* KMRSSTests.swift */; };
+		89E0354A193F2875004E58CC /* KMXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E03549193F2875004E58CC /* KMXMLParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,7 @@
 		89E03538193F282D004E58CC /* KMRSSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMRSSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E0353D193F282D004E58CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89E0353E193F282D004E58CC /* KMRSSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMRSSTests.swift; sourceTree = "<group>"; };
+		89E03549193F2875004E58CC /* KMXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KMXMLParser.swift; path = ../../KMXMLParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		89E0352D193F282D004E58CC /* KMRSS */ = {
 			isa = PBXGroup;
 			children = (
+				89E03548193F2846004E58CC /* KMXMLParser */,
 				89E03530193F282D004E58CC /* AppDelegate.swift */,
 				89E03532193F282D004E58CC /* Images.xcassets */,
 				89E0352E193F282D004E58CC /* Supporting Files */,
@@ -101,6 +104,14 @@
 				89E0353D193F282D004E58CC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89E03548193F2846004E58CC /* KMXMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				89E03549193F2875004E58CC /* KMXMLParser.swift */,
+			);
+			name = KMXMLParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89E0354A193F2875004E58CC /* KMXMLParser.swift in Sources */,
 				89E03531193F282D004E58CC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
