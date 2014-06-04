@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89E03531193F282D004E58CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E03530193F282D004E58CC /* AppDelegate.swift */; };
+		89E03533193F282D004E58CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89E03532193F282D004E58CC /* Images.xcassets */; };
+		89E0353F193F282D004E58CC /* KMRSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E0353E193F282D004E58CC /* KMRSSTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89E03539193F282D004E58CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89E03523193F282D004E58CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89E0352A193F282D004E58CC;
+			remoteInfo = KMRSS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		89E0352B193F282D004E58CC /* KMRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89E0352F193F282D004E58CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89E03530193F282D004E58CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		89E03532193F282D004E58CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		89E03538193F282D004E58CC /* KMRSSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMRSSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89E0353D193F282D004E58CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89E0353E193F282D004E58CC /* KMRSSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMRSSTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89E03528193F282D004E58CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89E03535193F282D004E58CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89E03522193F282D004E58CC = {
+			isa = PBXGroup;
+			children = (
+				89E0352D193F282D004E58CC /* KMRSS */,
+				89E0353B193F282D004E58CC /* KMRSSTests */,
+				89E0352C193F282D004E58CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89E0352C193F282D004E58CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89E0352B193F282D004E58CC /* KMRSS.app */,
+				89E03538193F282D004E58CC /* KMRSSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89E0352D193F282D004E58CC /* KMRSS */ = {
+			isa = PBXGroup;
+			children = (
+				89E03530193F282D004E58CC /* AppDelegate.swift */,
+				89E03532193F282D004E58CC /* Images.xcassets */,
+				89E0352E193F282D004E58CC /* Supporting Files */,
+			);
+			path = KMRSS;
+			sourceTree = "<group>";
+		};
+		89E0352E193F282D004E58CC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89E0352F193F282D004E58CC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89E0353B193F282D004E58CC /* KMRSSTests */ = {
+			isa = PBXGroup;
+			children = (
+				89E0353E193F282D004E58CC /* KMRSSTests.swift */,
+				89E0353C193F282D004E58CC /* Supporting Files */,
+			);
+			path = KMRSSTests;
+			sourceTree = "<group>";
+		};
+		89E0353C193F282D004E58CC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89E0353D193F282D004E58CC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89E0352A193F282D004E58CC /* KMRSS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89E03542193F282D004E58CC /* Build configuration list for PBXNativeTarget "KMRSS" */;
+			buildPhases = (
+				89E03527193F282D004E58CC /* Sources */,
+				89E03528193F282D004E58CC /* Frameworks */,
+				89E03529193F282D004E58CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KMRSS;
+			productName = KMRSS;
+			productReference = 89E0352B193F282D004E58CC /* KMRSS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		89E03537193F282D004E58CC /* KMRSSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89E03545193F282D004E58CC /* Build configuration list for PBXNativeTarget "KMRSSTests" */;
+			buildPhases = (
+				89E03534193F282D004E58CC /* Sources */,
+				89E03535193F282D004E58CC /* Frameworks */,
+				89E03536193F282D004E58CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89E0353A193F282D004E58CC /* PBXTargetDependency */,
+			);
+			name = KMRSSTests;
+			productName = KMRSSTests;
+			productReference = 89E03538193F282D004E58CC /* KMRSSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89E03523193F282D004E58CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "HotRod Software";
+				TargetAttributes = {
+					89E0352A193F282D004E58CC = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					89E03537193F282D004E58CC = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 89E0352A193F282D004E58CC;
+					};
+				};
+			};
+			buildConfigurationList = 89E03526193F282D004E58CC /* Build configuration list for PBXProject "KMRSS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 89E03522193F282D004E58CC;
+			productRefGroup = 89E0352C193F282D004E58CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89E0352A193F282D004E58CC /* KMRSS */,
+				89E03537193F282D004E58CC /* KMRSSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89E03529193F282D004E58CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89E03533193F282D004E58CC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89E03536193F282D004E58CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89E03527193F282D004E58CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89E03531193F282D004E58CC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89E03534193F282D004E58CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89E0353F193F282D004E58CC /* KMRSSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89E0353A193F282D004E58CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89E0352A193F282D004E58CC /* KMRSS */;
+			targetProxy = 89E03539193F282D004E58CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		89E03540193F282D004E58CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		89E03541193F282D004E58CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89E03543193F282D004E58CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = KMRSS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		89E03544193F282D004E58CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = KMRSS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		89E03546193F282D004E58CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KMRSS.app/KMRSS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KMRSSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		89E03547193F282D004E58CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KMRSS.app/KMRSS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KMRSSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89E03526193F282D004E58CC /* Build configuration list for PBXProject "KMRSS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89E03540193F282D004E58CC /* Debug */,
+				89E03541193F282D004E58CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89E03542193F282D004E58CC /* Build configuration list for PBXNativeTarget "KMRSS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89E03543193F282D004E58CC /* Debug */,
+				89E03544193F282D004E58CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		89E03545193F282D004E58CC /* Build configuration list for PBXNativeTarget "KMRSSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89E03546193F282D004E58CC /* Debug */,
+				89E03547193F282D004E58CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89E03523193F282D004E58CC /* Project object */;
+}
