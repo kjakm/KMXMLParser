@@ -30,6 +30,7 @@ class KMXMLParser: NSObject, NSXMLParserDelegate {
         parser.shouldProcessNamespaces = false
         parser.shouldReportNamespacePrefixes = false
         parser.shouldResolveExternalEntities = false
+        parser.delegate = self
         
         parser.parse()
     }
@@ -52,13 +53,13 @@ class KMXMLParser: NSObject, NSXMLParserDelegate {
             
     }
     
-    func parser(parser: NSXMLParser!,didStartElement elementName: String!, namespaceURI namespaceURI: String!, qualifiedName qualifiedName: String!, attributes attributeDict: NSDictionary!) {
+    func parser(parser: NSXMLParser!,didStartElement elementName: String!, namespaceURI namespaceURI: String!, #qualifiedName : String!, attributes attributeDict: NSDictionary!) {
         
         element = elementName
         
         if (elementName as NSString).isEqualToString("item") {
             elements = NSMutableDictionary.alloc()
-            elements = [:];
+            elements = [:]
             title = NSMutableString.alloc()
             title = ""
             date = NSMutableString.alloc()
@@ -68,13 +69,21 @@ class KMXMLParser: NSObject, NSXMLParserDelegate {
         }
     }
     
-    func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI namespaceURI: String!, qualifiedName qName: String!) {
+    func parser(parser: NSXMLParser!, didEndElement elementName: String!, #namespaceURI: String!, qualifiedName qName: String!) {
         
         if (elementName as NSString).isEqualToString("item") {
-            elements.setObject(title, forKey: "title")
-            elements.setObject(date, forKey: "date")
-            //            elements.setObject(summary, forKey: "summary") // Causing crash object cannot be nil
-            elements.setObject(link, forKey: "link")
+            if title != nil {
+                elements.setObject(title, forKey: "title")
+            }
+            if date != nil {
+                elements.setObject(date, forKey: "date")
+            }
+            if summary != nil {
+                elements.setObject(summary, forKey: "summary") // Causing crash object cannot be nil
+            }
+            if link != nil {
+                elements.setObject(link, forKey: "link")
+            }
             
             posts.addObject(elements)
         }
@@ -91,21 +100,5 @@ class KMXMLParser: NSObject, NSXMLParserDelegate {
             link.appendString(string)
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 }
