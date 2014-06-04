@@ -6,21 +6,30 @@ NB: The Swift code is still pretty rough but it's functioning.
 
 ###How to use - Objective-c
 
-1. Drag KMXMLParser.m and KMXMLParser.h into your Xcode project. Make sure to check the "Copy items into destination group's folder" box and add the files to your target.
+- Drag KMXMLParser.m and KMXMLParser.h into your Xcode project. Make sure to check the "Copy items into destination group's folder" box and add the files to your target.
 
-2. At the top of the class you want to parse the XML file ``#import "KMXMLParser.h"``
+- At the top of the class you want to parse the XML file ``#import "KMXMLParser.h"``
 
-3. To parse your file you need to use the following code:
+- To parse your file you need to use the following code:
 
-    ``KMXMLParser *km = [[KMXMLParser alloc] initWithURL:url delegate:self]; `` 
+```Objective-C
+    KMXMLParser *km = [[KMXMLParser alloc] initWithURL:url delegate:self]; 
 
-    ``NSMutableArray *posts = [km posts];``
+    NSMutableArray *posts = [km posts];
+```
+- This will return a mutable array containing all data from the feed (title, date, summary, link). If you want an array with only one of those four pieces of data specify the tag:
 
-4. Your posts array will now contain all the data from the XML. You can access it using the relevent key. For example, if you want the title of the most recent post you would use:
+```Objective-C
+    NSMutableArray *posts = [km postsWithTag:@"title"];
+```
 
-    ``[[posts objectAtIndex:0] objectForKey@"title"]);``  
+- Your posts array will now contain all the data from the XML. You can access it using the relevent key. For example, if you want the title of the most recent post you would use:
 
-5. You can also get the ``summary``, ``date``, and ``link`` using the appropriate key.
+```Objective-C
+    [[posts objectAtIndex:0] objectForKey@"title"]);
+```
+
+- You can also get the ``summary``, ``date``, and ``link`` using the appropriate key.
 
 ###How to use - Swift
 

@@ -28,7 +28,7 @@
 
 @implementation AppDelegate
 
-@synthesize window = _window, navController = _navController;
+@synthesize window = _window;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -36,14 +36,16 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     MainViewController *mainViewController = [[MainViewController alloc] initWithStyle:UITableViewStylePlain];
-    self.navController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+    
+    // Set appearance
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0.159 green:0.841 blue:0.082 alpha:1.000]];
     
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
     [self.window makeKeyAndVisible];
-    [self.window addSubview:self.navController.view];
-    
+    [self.window setRootViewController:nc];
     
     return YES;
 }

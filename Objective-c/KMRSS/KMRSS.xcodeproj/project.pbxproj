@@ -19,6 +19,8 @@
 		89BA20C114C1296600D33178 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BA20C014C1296600D33178 /* MainViewController.m */; };
 		89D7EAB814E2106C0030D037 /* KMXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D7EAB714E2106C0030D037 /* KMXMLParser.m */; };
 		89D7EABA14E215A90030D037 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = 89D7EAB914E215A90030D037 /* README.mdown */; };
+		89E2F8EE18638D78006FF3F4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 89E2F8EC18638D78006FF3F4 /* Icon@2x.png */; };
+		89E2F8EF18638D78006FF3F4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 89E2F8ED18638D78006FF3F4 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		89D7EAB614E2106C0030D037 /* KMXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KMXMLParser.h; path = ../../KMXMLParser.h; sourceTree = "<group>"; };
 		89D7EAB714E2106C0030D037 /* KMXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KMXMLParser.m; path = ../../KMXMLParser.m; sourceTree = "<group>"; };
 		89D7EAB914E215A90030D037 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.mdown; path = ../../README.mdown; sourceTree = "<group>"; };
+		89E2F8EC18638D78006FF3F4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		89E2F8ED18638D78006FF3F4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 		892EBCB814C0F5E400C9B31B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				89E2F8EC18638D78006FF3F4 /* Icon@2x.png */,
+				89E2F8ED18638D78006FF3F4 /* Icon.png */,
 				89D7EAB914E215A90030D037 /* README.mdown */,
 				892EBCB914C0F5E400C9B31B /* KMRSS-Info.plist */,
 				892EBCBA14C0F5E400C9B31B /* InfoPlist.strings */,
@@ -142,6 +148,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "HotRod software";
+				TargetAttributes = {
+					892EBCAC14C0F5E400C9B31B = {
+						DevelopmentTeam = 4JBNRJ3Q9L;
+					};
+				};
 			};
 			buildConfigurationList = 892EBCA714C0F5DF00C9B31B /* Build configuration list for PBXProject "KMRSS" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -165,10 +176,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89E2F8EF18638D78006FF3F4 /* Icon.png in Resources */,
 				892EBCBC14C0F5E400C9B31B /* InfoPlist.strings in Resources */,
 				89D7EABA14E215A90030D037 /* README.mdown in Resources */,
 				8988413B173BDC77008FE738 /* Default-568h@2x.png in Resources */,
 				8958F925173C254500BDBBC4 /* WebViewController.xib in Resources */,
+				89E2F8EE18638D78006FF3F4 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,10 +271,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KMRSS/KMRSS-Prefix.pch";
 				INFOPLIST_FILE = "KMRSS/KMRSS-Info.plist";
+<<<<<<< HEAD:Objective-c/KMRSS/KMRSS.xcodeproj/project.pbxproj
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+=======
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+>>>>>>> 9cea211dcbd8167886fc1542446a316f1a6da434:KMRSS/KMRSS.xcodeproj/project.pbxproj
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -271,10 +289,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KMRSS/KMRSS-Prefix.pch";
 				INFOPLIST_FILE = "KMRSS/KMRSS-Info.plist";
+<<<<<<< HEAD:Objective-c/KMRSS/KMRSS.xcodeproj/project.pbxproj
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+=======
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+>>>>>>> 9cea211dcbd8167886fc1542446a316f1a6da434:KMRSS/KMRSS.xcodeproj/project.pbxproj
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

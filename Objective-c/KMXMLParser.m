@@ -53,9 +53,22 @@
 	[parser parse];
 }
 
--(NSMutableArray *)posts
+- (NSMutableArray *)posts
 {
-	return posts;
+    return posts;
+}
+
+- (NSMutableArray *)postsWithTag:(NSString *)tag
+{
+    if (tag == nil) return posts;
+    else {
+        NSMutableArray *p = [[NSMutableArray alloc] init];
+        for (int i = 0; i < posts.count; i++) {
+            [p addObject:[[posts objectAtIndex:i] objectForKey:tag]];
+             i++;
+        }
+        return p;
+    }
 }
 
 #pragma mark NSXMLParser Delegate Methods
