@@ -33,21 +33,22 @@ NB: The Swift code is still pretty rough but it's functioning.
 
 ###How to use - Swift
 
-1. Drag KMXMLParser.swift into your Xcode project. Make sure to check the "Copy items into destination group's folder" box and add the files to your target.
+- Drag KMXMLParser.swift into your Xcode project. Make sure to check the "Copy items into destination group's folder" box and add the files to your target.
 
-2. To parse your file you need to use the following code:
+- To parse your file you need to use the following code:
 
-    ``var parser : KMXMLParser = KMXMLParser.alloc().initWithURL(url) as KMXMLParser`` 
+```Swift
+    var parser : KMXMLParser = KMXMLParser.alloc().initWithURL(url) as KMXMLParser 
+    dataArray = parser.posts
+```
+- Your data array will now contain all the data from the XML. You can access it using the relevant key. For example, if you want the title of the most recent post you would use:
 
-    ``dataArray = parser.posts``
+```Swift
+    var dict : NSDictionary! = dataArray.objectAtIndex(0) as NSDictionary
+    var title = dict.objectForKey("title")
+``` 
 
-3. Your data array will now contain all the data from the XML. You can access it using the relevant key. For example, if you want the title of the most recent post you would use:
-
-    ``var dict : NSDictionary! = dataArray.objectAtIndex(0) as NSDictionary
-      var title = dict.objectForKey("title")
-``  
-
-4. You can also get the ``summary``, ``date``, and ``link`` using the appropriate key.
+- You can also get the ``summary``, ``date``, and ``link`` using the appropriate key.
 
 ###License
 
