@@ -98,7 +98,7 @@ class KMXMLParser: NSObject, NSXMLParserDelegate {
                 elements.setObject(date, forKey: "date")
             }
             if summary != nil {
-                elements.setObject(summary, forKey: "summary") // Causing crash object cannot be nil
+                elements.setObject(summary, forKey: "summary")
             }
             if link != nil {
                 elements.setObject(link, forKey: "link")
