@@ -49,11 +49,6 @@ NB: The Swift code is still pretty rough but it's functioning.
 ``` 
 
 - You can also get the ``summary``, ``date``, and ``link`` using the appropriate key.
-### To do
-
-- Implement delegate pattern in Swift KMXMLParser (might do this through blocks/closures)
-- Allow fetching of custom/specified tags
-- Fetch images
 
 ###License
 
