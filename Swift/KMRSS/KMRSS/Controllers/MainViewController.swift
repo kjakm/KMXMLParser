@@ -14,9 +14,9 @@ class MainViewController : UITableViewController, UITableViewDelegate, UITableVi
     var dataArray : NSArray = []
     
     override func viewDidLoad() {
-        tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: "CellIdentifier")
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        self.tableView.rowHeight = 60
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -38,11 +38,15 @@ class MainViewController : UITableViewController, UITableViewDelegate, UITableVi
     }
 
     override func tableView (tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath) as UITableViewCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("cell") as? UITableViewCell
+        
+        if !cell {
+            cell = UITableViewCell(style:UITableViewCellStyle.Subtitle, reuseIdentifier:"cell")
+        }
         
         var dict : NSDictionary! = dataArray.objectAtIndex(indexPath.row) as NSDictionary
-        cell.textLabel.text = dict.objectForKey("title") as String
-
+        cell!.textLabel.text = dict.objectForKey("title") as String
+        cell!.detailTextLabel.text = dict.objectForKey("date") as String
         return cell
     }
     
