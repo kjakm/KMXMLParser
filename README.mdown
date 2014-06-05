@@ -45,7 +45,7 @@ NB: The Swift code is still pretty rough but it's functioning.
 
 ```Swift
     var dict : NSDictionary! = dataArray.objectAtIndex(0) as NSDictionary
-    var title = dict.objectForKey("title")
+    var title = dict.objectForKey("title") as String
 ``` 
 
 - You can also get the ``summary``, ``date``, and ``link`` using the appropriate key.
