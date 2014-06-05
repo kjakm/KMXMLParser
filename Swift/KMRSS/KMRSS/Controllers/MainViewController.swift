@@ -41,8 +41,7 @@ class MainViewController : UITableViewController, UITableViewDelegate, UITableVi
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath) as UITableViewCell
         
         var dict : NSDictionary! = dataArray.objectAtIndex(indexPath.row) as NSDictionary
-        var s = dict.objectForKey("title")
-        cell.textLabel.text = "\(s)"
+        cell.textLabel.text = dict.objectForKey("title") as String
 
         return cell
     }
@@ -50,8 +49,8 @@ class MainViewController : UITableViewController, UITableViewDelegate, UITableVi
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         var vc : WebViewController = WebViewController.alloc()
         var dict : NSDictionary! = dataArray.objectAtIndex(indexPath.row) as NSDictionary
-        var s = dict.objectForKey("link")
-        vc.link = "\(s)"
+        vc.link = dict.objectForKey("link") as NSString
+        vc.title = dict.objectForKey("title") as NSString
         
         self.navigationController.pushViewController(vc, animated: true)
 
