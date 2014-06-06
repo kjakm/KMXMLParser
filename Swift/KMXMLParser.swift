@@ -85,6 +85,8 @@ class KMXMLParser: NSObject, NSXMLParserDelegate {
             date = ""
             link = NSMutableString.alloc()
             link = ""
+            summary = NSMutableString.alloc()
+            summary = ""
         }
     }
     
