@@ -16,7 +16,7 @@ class MainViewController : UITableViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.rowHeight = 60
+        self.tableView.rowHeight = 100
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -45,8 +45,10 @@ class MainViewController : UITableViewController, UITableViewDelegate, UITableVi
         }
         
         var dict : NSDictionary! = dataArray.objectAtIndex(indexPath.row) as NSDictionary
-        cell!.textLabel.text = dict.objectForKey("title") as String
-        cell!.detailTextLabel.text = dict.objectForKey("date") as String
+        cell!.textLabel.text = dataArray.objectAtIndex(indexPath.row).objectForKey("title") as String
+        cell!.detailTextLabel.numberOfLines = 4
+        cell!.detailTextLabel.text = dict.objectForKey("summary") as String
+        
         return cell
     }
     
