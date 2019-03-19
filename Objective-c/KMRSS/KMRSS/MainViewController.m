@@ -60,7 +60,7 @@
     
     /* Create the parser and initialize with the feed URL. The URL must start with http:// . If it starts
     with feed:// change it to http:// */
-    NSURL *feedURL = [NSURL URLWithString:@"http://mf.feeds.reuters.com/reuters/technologyNews"];
+    NSURL *feedURL = [NSURL URLWithString:@"https://www.nasa.gov/rss/dyn/breaking_news.rss"];
     KMXMLParser *parser = [[KMXMLParser alloc] initWithURL:feedURL delegate:self];
     //To get the result and store it in an array call the parser 'posts' method
     self.dataArray = [parser posts];
