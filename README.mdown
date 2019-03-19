@@ -54,7 +54,7 @@ NB: The Swift code is still pretty rough but it's functioning.
 
   The MIT License
 
-  Copyright 2011-2015 Kieran McGrady
+  Copyright 2011-2019 Kieran McGrady
 
   Permission is hereby granted, free of charge, to any person obtaining a copy of 
   this software and associated documentation files (the "Software"), to deal in 
