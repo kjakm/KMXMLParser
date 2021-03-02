@@ -1,10 +1,10 @@
-#KMXMLParser
+# KMXMLParser
 
 Follow the instructions below or check out the Objective-c and Swift sample projects. 
 
 NB: The Swift code is still pretty rough but it's functioning.
 
-###How to use - Objective-c
+### How to use - Objective-c
 
 - Drag KMXMLParser.m and KMXMLParser.h into your Xcode project. Make sure to check the "Copy items into destination group's folder" box and add the files to your target.
 
@@ -31,7 +31,7 @@ NB: The Swift code is still pretty rough but it's functioning.
 
 - You can also get the ``summary``, ``date``, and ``link`` using the appropriate key.
 
-###How to use - Swift
+### How to use - Swift
 
 - Drag KMXMLParser.swift into your Xcode project. Make sure to check the "Copy items into destination group's folder" box and add the files to your target.
 
@@ -50,11 +50,11 @@ NB: The Swift code is still pretty rough but it's functioning.
 
 - You can also get the ``summary``, ``date``, and ``link`` using the appropriate key.
 
-###License
+### License
 
   The MIT License
 
-  Copyright 2011-2019 Kieran McGrady
+  Copyright 2011-2021 Kieran McGrady
 
   Permission is hereby granted, free of charge, to any person obtaining a copy of 
   this software and associated documentation files (the "Software"), to deal in 
